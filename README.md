@@ -1,4 +1,4 @@
-# Pulley (customizable)
+# Pulley (customizable, with lots of tooth profiles)
 
 This is OpenSCAD script for modelling different timing belt pulleys, that could be printed on regular FDM printer.
 
@@ -64,11 +64,23 @@ This is OpenSCAD script for modelling different timing belt pulleys, that could 
       * Best
     * Flip pulley upside down _(if pulley diameter bigger than bese, you can flip it upside down right here for easier 3D-printing)_
 
-_* to produce holes for holding bolts and nuts, **base height** + **bottom flange width** should correspond to nuts used, for example greater than 7 mm for M3 nuts_
+_\* to produce holes for holding bolts and nuts, **base height** + **bottom flange width** should correspond to nuts used, for example greater than 7 mm for M3 nuts_
 
-_** to produce holes for holding bolts and nuts, **base diameter** should correspond to nuts used_
+_\*\* to produce holes for holding bolts and nuts, **base diameter** should correspond to nuts used_
 
 ## Authors and contributors
 
 This project is my attempt to organise a little this usefull thing and share for further improvements.
-Initially it was made by droftarts @ January 2012, I've found it on thingiverse, published by D14 @ October 30, 2016.
+
+I've found it on thingiverse published by D14 @ October 30, 2016. Initially it was made by droftarts @ January 2012.
+
+I have improved some things (made code more readable, added some options, improved flanges shape). Later I have found many remixes, with some usefull options. I will try to add their functions too.
+
+I think this will be better to improve one tool with lots of functionality, than have many separate "a little improved".
+[Here is github source, you are welcome to improve.](https://github.com/Kekht/pulley_customizable)
+
+## Converting from SCAD to STEP
+
+If you need STEP file, instead of using STL, you can actually import SCAD to FreeCAD, and save STEP there. [Here is guide](https://forum.lulzbot.com/t/tip-converting-openscad-files-easily-to-step-with-freecad/228)
+
+But please note, that first you will need manually edit SCAD to reflect all "customizable" options in code.

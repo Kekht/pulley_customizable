@@ -18,9 +18,13 @@
  * @using 1 x m3x10 set screw or 1 x m3x8 grub screw
  */
 
+//	****************************
+//	*** CONFIGURABLE OPTIONS ***
+//	****************************
+
 /* [Profile] */
 
-number_of_teeth = 60; // [10:100]
+number_of_teeth = 20; // [10:100]
 
 profile = 12; // [1:MXL, 2:40DP, 3:XL, 4:H, 5:T2.5, 6:T5, 7:T10, 8:AT5, 9:HTD_3mm, 10:HTD_5mm, 11:HTD_8mm, 12:GT2_2mm, 13:GT2_3mm, 14:GT2_5mm]
 
@@ -31,16 +35,16 @@ motor_shaft_diameter = 5;
 toothed_part_length = 6; // [3:30]
 
 // (in mm)
-base_height = 8; // [0:30]
+base_height = 7; // [0:30]
 
 // (in mm)
-base_diameter = 20;     // [10:50]
+base_diameter = 18;     // [10:50]
 
 /* [Top and Bottom flanges] */
 
 top_flange = 1; // [0:No, 1:Yes]
 
-top_flange_height = 1; // [0.5:Tiny (0.5mm), 1:Small (1mm), 1.5:Normal (1.5mm), 2:Big (2mm), 3:Bigger (3mm), 4:Hudge (5mm), 1.66: Powge 16T, 2.89:Powge 20T, 2.295: Powge 25T, 2.205:Powge 30T]
+top_flange_height = 3; // [0.5:Tiny (0.5mm), 1:Small (1mm), 1.5:Normal (1.5mm), 2:Big (2mm), 3:Bigger (3mm), 4:Hudge (5mm), 1.66: Powge 16T, 2.89:Powge 20T, 2.295: Powge 25T, 2.205:Powge 30T]
 
 top_flange_width = 1; // [0:None, 0.5:Tiny (0.5mm), 1:Small (1mm), 1.5:Normal (1.5mm), 2:Big (2mm), 3:Bigger (3mm), 4:Hudge (5mm)]
 
@@ -75,21 +79,6 @@ bearing_grooves_diameter = 5; // [5:30]
 // (in mm)
 bearing_grooves_height = 2.5; // [2.5:2.5 mm, 3:3 mm, 4:4 mm, 5:5 mm, 6:6 mm, 7:7 mm, 8:8 mm, 9:9 mm]
 
-/* [Hidden] */
-
-no_of_nuts = screws_disposition;
-nut_angle = no_of_nuts != 3 ? 90 : 120;
-
-motor_shaft = motor_shaft_diameter + 0.2;
-
-screw_diameters = [1, 1.6, 2, 2.5, 3, 4, 5, 6];
-nut_widths = [2.5, 3.2, 4, 5, 5.5, 7, 8, 10];
-nut_depths = [1, 1.3, 1.6, 2, 2.4, 3.2, 4.7, 5.2];
-
-screw_diameter = screw_diameters[screw_profile] + 0.2;
-nut_width = nut_widths[screw_profile] + 0.2;
-nut_depth = nut_depths[screw_profile] + 0.3;
-
 //    ********************************
 //    ** Scaling tooth for good fit **
 //    ********************************
@@ -106,6 +95,25 @@ additional_tooth_depth = 0; //mm
 surfaces_quality = 4; // [4:Standard, 8:High, 16:Highest, 32:Best]
 
 flip_pulley_upside_down = 0;// [0:No, 1:Yes]
+
+//	*********************************************************
+//	*** IF CONFIGURING - PLEASE DO NOT TOUCH FURTHER CODE ***
+//	*********************************************************
+
+/* [Hidden] */
+
+no_of_nuts = screws_disposition;
+nut_angle = no_of_nuts != 3 ? 90 : 120;
+
+motor_shaft = motor_shaft_diameter + 0.2;
+
+screw_diameters = [1, 1.6, 2, 2.5, 3, 4, 5, 6];
+nut_widths = [2.5, 3.2, 4, 5, 5.5, 7, 8, 10];
+nut_depths = [1, 1.3, 1.6, 2, 2.4, 3.2, 4.7, 5.2];
+
+screw_diameter = screw_diameters[screw_profile] + 0.2;
+nut_width = nut_widths[screw_profile] + 0.2;
+nut_depth = nut_depths[screw_profile] + 0.3;
 
 // calculated constants
 
